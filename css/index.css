@@ -1,0 +1,110 @@
+body{
+	margin:0;
+	padding:0;
+	font-family:"Helevtica";
+	background: url(../imgs/packed-4.png);
+	background-size:cover;
+	overflow:hidden;
+}
+figure{
+	margin:0;
+}
+#canvas{ 
+	display: block;
+	position:absolute;
+	box-shadow:0 0 1px black;
+  background:#deaf7f;
+  background-color:rgba(233,230,236,0.3);
+}
+.imgs {
+  position: relative;
+ 
+ }
+.imgs::before{
+  content: '';
+  display: block;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 2048px 800px;
+  height: 800px;
+  width: 2048px;
+  background-image: url("../imgs/1.jpg");
+  -webkit-animation-name:before;
+  -webkit-animation-duration: 160s;
+  animation-duration: 160s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+ 
+}
+@-webkit-keyframes before {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+
+    50% {
+        -webkit-transform: translate3d(-2048px, 0, 0);
+        transform: translate3d(-2048px, 0, 0)
+    }
+
+    50.001% {
+        -webkit-transform: translate3d(2048px, 0, 0);
+        transform: translate3d(2048px, 0, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+}
+
+.imgs::after{
+  content: '';
+  display: block;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 2048px 800px;
+  height: 800px;
+  width: 2048px;
+  background-image: url("../imgs/1.jpg");
+  -webkit-animation-name:after;
+  -webkit-animation-duration: 160s;
+  animation-duration: 160s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+@-webkit-keyframes after {
+    0% {
+        -webkit-transform: translate3d(2048px, 0, 0);
+        transform: translate3d(2048px, 0, 0)
+    }
+
+    50% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+
+    100% {
+        -webkit-transform: translate3d(-2048px, 0, 0);
+        transform: translate3d(-2048px, 0, 0)
+    }
+}
+ #canvas{
+    display: block;
+    position: absolute;
+    margin:auto;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+  }
+  @media(max-width: 640px){
+    #canvas{
+      width: 300px;
+      height: 300px;
+    }
+  }
